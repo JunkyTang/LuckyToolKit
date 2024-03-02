@@ -1,0 +1,24 @@
+{
+  "name": "LuckyToolKit",
+  "version": "0.1.0",
+  "summary": "A short description of LuckyToolKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/JunkyTang/LuckyToolKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Lucky": "921969987@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/JunkyTang/LuckyToolKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "LuckyToolKit/Classes/**/*",
+  "swift_version": "5.0"
+}

@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '13.0'
+
+target 'LuckyToolKit_Example' do
+  pod 'LuckyToolKit', :path => '../'
+
+  target 'LuckyToolKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

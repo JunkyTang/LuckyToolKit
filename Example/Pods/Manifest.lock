@@ -1,0 +1,16 @@
+PODS:
+  - LuckyToolKit (0.1.0)
+
+DEPENDENCIES:
+  - LuckyToolKit (from `../`)
+
+EXTERNAL SOURCES:
+  LuckyToolKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LuckyToolKit: 6463102306c1cea540065033212bb931e87a9a83
+
+PODFILE CHECKSUM: e0880de5a891a1b8ceb11ed031a67e83f85e8a05
+
+COCOAPODS: 1.15.2
