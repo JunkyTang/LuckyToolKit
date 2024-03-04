@@ -6,16 +6,24 @@
 //
 
 import UIKit
-import LuckyExtensions
 import Combine
 import SnapKit
 
 open class ViewController: UIViewController {
 
+    open override var title: String? {
+        didSet {
+            navigationBar.title = title ?? ""
+        }
+    }
     
     open var navigationBar: NavigationBar = NavigationBar.loadFromXib()
     
     open var cancellables: Set<AnyCancellable> = []
+    
+    deinit {
+        cancellables.forEach{$0.cancel()}
+    }
     
     open override func viewDidLoad() {
         super.viewDidLoad()

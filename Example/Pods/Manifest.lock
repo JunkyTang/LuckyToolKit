@@ -1,15 +1,26 @@
 PODS:
-  - LuckyToolKit (0.1.0)
+  - Alamofire (5.8.1)
+  - LuckyToolKit (0.1.0):
+    - Alamofire
+    - SnapKit
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - LuckyToolKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SnapKit
 
 EXTERNAL SOURCES:
   LuckyToolKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LuckyToolKit: 6463102306c1cea540065033212bb931e87a9a83
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  LuckyToolKit: e69b5b0cd2d9f6e970cdbf14ec4fd3407d8b9c5c
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
 PODFILE CHECKSUM: e0880de5a891a1b8ceb11ed031a67e83f85e8a05
 
