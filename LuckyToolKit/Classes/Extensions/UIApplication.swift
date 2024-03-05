@@ -8,14 +8,15 @@
 import UIKit
 
 
-extension UIApplication {
+public extension UIApplication {
     
-    public static var safeAreaInset: UIEdgeInsets {
-        var sa = UIEdgeInsets.zero
+    static var safeAreaInset: UIEdgeInsets {
+        var sai = UIEdgeInsets.zero
         guard let delegate = UIApplication.shared.delegate,
               let window = delegate.window,
               let window = window
-        else { return sa }
-        return window.safeAreaInsets
+        else { return sai }
+        sai = window.safeAreaInsets
+        return sai
     }
 }

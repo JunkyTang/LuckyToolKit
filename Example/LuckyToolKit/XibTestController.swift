@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  XibTestController.swift
 //  LuckyToolKit_Example
 //
 //  Created by junky on 2024/3/4.
@@ -8,10 +8,7 @@
 
 import LuckyToolKit
 
-class HomeController: ViewController {
-    
-    @UDStorable(key: "aa", defoult: [])
-    var aa: [Int]
+class XibTestController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
