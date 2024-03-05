@@ -9,14 +9,8 @@ import UIKit
 
 public class PopMask: UIView {
     
-    var didTapSelfCallback: () -> Void = {
-        
-    }
-    
-    
-    public override func awakeFromNib() {
-        super.awakeFromNib()
-        
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
         backgroundColor = UIColor.init(white: 0, alpha: 0.4)
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapSelf))
         tap.delegate = self
@@ -24,11 +18,33 @@ public class PopMask: UIView {
         isUserInteractionEnabled = true
     }
     
+    public required init?(coder: NSCoder) {
+        fatalError()
+    }
+    
+    
+    var didTapSelfCallback: () -> Void = {
+        
+    }
+    
+    
+//    public override func awakeFromNib() {
+//        super.awakeFromNib()
+//        
+//        
+//    }
+    
     @objc public func didTapSelf() {
         didTapSelfCallback()
     }
     
+    public override func safeAreaInsetsDidChange() {
+        super.safeAreaInsetsDidChange()
+        log("PopMask \(safeAreaInsets)")
+    }
 
+    
+    
 }
 
 extension PopMask: XibLoadable {}

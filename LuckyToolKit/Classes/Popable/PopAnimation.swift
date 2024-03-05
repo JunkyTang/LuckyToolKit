@@ -17,7 +17,6 @@ public enum PopAnimation {
     
     func fromPosition(_ view: UIView) {
         
-        
         var lat = PopPosition.LateralPosition.fill(padding: -40)
         var lon = PopPosition.LongitudinalPosition.fill(padding: -40)
         var pos = PopPosition.inScreen(lateral: lat, longitudinal: lon)
@@ -97,7 +96,7 @@ public enum PopAnimation {
     func toPosition(_ view: UIView) {
         
         switch self {
-        case .none(let position):
+        case .none(_):
             return
         case .move(_, let to):
             var moveX: CGFloat = 0

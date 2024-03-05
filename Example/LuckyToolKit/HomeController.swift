@@ -13,10 +13,21 @@ class HomeController: ViewController {
     @UDStorable(key: "aa", defoult: [])
     var aa: [Int]
 
+    @IBOutlet weak var btn: IBButton!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        btn.publisher(events: .touchUpInside).sink { _ in
+            let pop = TestPopView.loadFromXib()
+            pop.show()
+        }.store(in: &cancellables)
+        
     }
 
 

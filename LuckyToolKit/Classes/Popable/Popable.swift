@@ -41,23 +41,22 @@ public extension Popable {
                   let window = delegate.window else { return }
             superView = window
         }
-        
+
         if needMask {
             
-            let mask = PopMask.loadFromXib()
+            let mask = PopMask(frame: .zero)
             mask.didTapSelfCallback = didTapMask
             superView?.addSubview(mask)
             mask.snp.makeConstraints { make in
-                make.edges.equalTo(0)
+                make.edges.equalTo(UIEdgeInsets.zero)
             }
             superView = mask
         }
-        
         guard let superView = superView else { return }
         superView.addSubview(containerView)
         animation.fromPosition(containerView)
-        superView.layoutIfNeeded()
-        UIView.animate(withDuration: 0.8) {
+        
+        UIView.animate(withDuration: 0.25) {
             animation.toPosition(containerView)
         }
         
@@ -76,7 +75,7 @@ public extension Popable {
         case .none(_):
             viewForRemove.removeFromSuperview()
         case .move(_, _):
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.25) {
                 containerView.transform = CGAffineTransform.identity
             } completion: { finish in
                 viewForRemove.removeFromSuperview()
@@ -84,7 +83,7 @@ public extension Popable {
             }
 
         case .scale(_, _):
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.25) {
                 containerView.transform = CGAffineTransform.identity
             } completion: { finish in
                 viewForRemove.removeFromSuperview()
