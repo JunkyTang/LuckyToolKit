@@ -9,7 +9,11 @@ import Foundation
 
 public struct LuckyException: Error {
     
-    var msg: String
+    public var msg: String
+    
+    public init(msg: String) {
+        self.msg = msg
+    }
 }
 
 
