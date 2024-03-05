@@ -34,6 +34,8 @@
 		38B343F79F4673935885DB27DB57879F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854D0C71C556F1712900E64AE515760B /* UIImage.swift */; };
 		3A59D8FBAF9A54906E3644AC80465AFB /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724353880512D297F1284886982AA693 /* Notifications.swift */; };
 		3B6E8CD72B96AE1400808A60 /* CodableEnumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E8CD62B96AE1400808A60 /* CodableEnumeration.swift */; };
+		3B6E8CD92B96BDBD00808A60 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E8CD82B96BDBD00808A60 /* Future.swift */; };
+		3B6E8CDB2B96C11800808A60 /* Popable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E8CDA2B96C11800808A60 /* Popable.swift */; };
 		3E5EBA2DD0C3B607801DFDB5A310D65E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F6A7303DB474D8371A3527A1AE235 /* Array.swift */; };
 		3FA127A261BB563409868A0DC21807B2 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A228314F1E2B357E01171CB8F19BAD /* ResponseSerialization.swift */; };
 		48225BD095C9928F0375AC193F60B377 /* Pods-LuckyToolKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3794052EEDC968FE6178FF1B57D8BE /* Pods-LuckyToolKit_Tests-dummy.m */; };
@@ -214,6 +216,8 @@
 		36808144B911D9FB3E349D14D7931AA2 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Sources/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
 		377D2D37B6019A617204E166286815C0 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
 		3B6E8CD62B96AE1400808A60 /* CodableEnumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableEnumeration.swift; sourceTree = "<group>"; };
+		3B6E8CD82B96BDBD00808A60 /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		3B6E8CDA2B96C11800808A60 /* Popable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popable.swift; sourceTree = "<group>"; };
 		3D17ECE1A90174F2CB5227030B5EC102 /* PopAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PopAnimation.swift; sourceTree = "<group>"; };
 		3D4332011249A6D20635BE0AC504A7E8 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
 		3DA0B921CD15BBBFCAFA4B230FDD8E43 /* Pods-LuckyToolKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LuckyToolKit_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -488,6 +492,7 @@
 				9FA76CEF992F2264CFB9E8733A56E26A /* PopMask.swift */,
 				0D0BFC4F956CC2FEDCEAF9482D09F9C7 /* PopMask.xib */,
 				7FD8A2CA0857E7B8EE18AB09D4DD1C13 /* PopPosition.swift */,
+				3B6E8CDA2B96C11800808A60 /* Popable.swift */,
 			);
 			name = Popable;
 			path = LuckyToolKit/Classes/Popable;
@@ -588,6 +593,7 @@
 				82F80D201DF739F3EF4AEB0AF0C1DBF2 /* Publisher.swift */,
 				D7F3F25669559E2EA55D03AADA2D9596 /* Subject.swift */,
 				ACE77BAB2533C21D2D7568F61CCD6C53 /* UIControl.swift */,
+				3B6E8CD82B96BDBD00808A60 /* Future.swift */,
 			);
 			name = Combine;
 			path = LuckyToolKit/Classes/Combine;
@@ -1143,7 +1149,9 @@
 				1F29C42659B5BA0553CEF9EA8B28D632 /* UIControl.swift in Sources */,
 				38B343F79F4673935885DB27DB57879F /* UIImage.swift in Sources */,
 				5AE40428690EF4D4BC246D68988E67B6 /* UploadTask.swift in Sources */,
+				3B6E8CDB2B96C11800808A60 /* Popable.swift in Sources */,
 				0142553203ABCADD0886FF9FD113C181 /* ViewController.swift in Sources */,
+				3B6E8CD92B96BDBD00808A60 /* Future.swift in Sources */,
 				970AB754846ECD03A80D942C03275958 /* ViewController.xib in Sources */,
 				F9E264C3AB3BC9887026E9F8B5713FD8 /* XibLoadable.swift in Sources */,
 			);
