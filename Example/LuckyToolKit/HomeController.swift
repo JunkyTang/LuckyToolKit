@@ -16,6 +16,7 @@ class HomeController: ViewController {
     @IBOutlet weak var btn: IBButton!
     
     
+    @IBOutlet weak var blueView: UIView!
     
     
     override func viewDidLoad() {
@@ -24,21 +25,21 @@ class HomeController: ViewController {
         // Do any additional setup after loading the view.
         
         btn.publisher(events: .touchUpInside).sink { _ in
-            let pop = TestPopView.loadFromXib()
-            pop.show()
+            self.cancellables.forEach{$0.cancel()}
         }.store(in: &cancellables)
         
+        
+        let publisher = blueView.publisher(gestureRecognizer: UITapGestureRecognizer())
+            
+        publisher.sink { _ in
+            log("-----")
+        }.store(in: &cancellables)
+        
+        publisher.sink { _ in
+            log("++++++")
+        }.store(in: &cancellables)
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

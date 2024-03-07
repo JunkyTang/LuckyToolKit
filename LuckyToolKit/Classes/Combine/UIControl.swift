@@ -47,15 +47,15 @@ public extension Publishers {
         
     }
     
-    struct UIControlPublisher<C: UIControl>: Publisher {
+    struct UIControlPublisher: Publisher {
         
         public typealias Output = UIControl
         public typealias Failure = Never
         
-        private var control: C
-        private var events: C.Event
+        private var control: Output
+        private var events: Output.Event
         
-        init(control: C, events: UIControl.Event) {
+        init(control: Output, events: UIControl.Event) {
             self.control = control
             self.events = events
         }
@@ -72,7 +72,16 @@ public extension Publishers {
 
 public extension UIControl {
     
-    func publisher(events: UIControl.Event) -> Publishers.UIControlPublisher<UIControl> {
+    func publisher(events: UIControl.Event) -> Publishers.UIControlPublisher {
         return Publishers.UIControlPublisher(control: self, events: events)
     }
 }
+
+
+
+
+
+
+
+
+

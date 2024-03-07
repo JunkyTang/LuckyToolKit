@@ -31,6 +31,8 @@
 		33C6DC0EC5113F59CD6360FDF22D50D2 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825027D931D8EFC688A86A378F560140 /* ConstraintDirectionalInsets.swift */; };
 		385BC4B250B6A6DB8AAAEA77D5B7A46F /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2EA774309C1BF052C22118C64CBCF /* Combine.swift */; };
 		3A59D8FBAF9A54906E3644AC80465AFB /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724353880512D297F1284886982AA693 /* Notifications.swift */; };
+		3B0A1C142B998F1D009AF90E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A1C132B998F1D009AF90E /* UIView.swift */; };
+		3B0A1C162B998F26009AF90E /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A1C152B998F26009AF90E /* UIGestureRecognizer.swift */; };
 		3D824D37ADCAFDEB28D25FDBAF7FFE3A /* ViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 7E732BC72536698824AB3BB0638A35A8 /* ViewController.xib */; };
 		3FA127A261BB563409868A0DC21807B2 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A228314F1E2B357E01171CB8F19BAD /* ResponseSerialization.swift */; };
 		4103DD9F1B8C4932EF38A0EFA63F54CC /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A12D0EB6122E3FD8B70788AE902D5C /* ConstraintItem.swift */; };
@@ -218,6 +220,8 @@
 		377D2D37B6019A617204E166286815C0 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
 		37E50E83C7F0638B21C584758C3B775C /* LuckyToolKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LuckyToolKit-umbrella.h"; sourceTree = "<group>"; };
 		3A15808A1D9EE74C60A218B3E7B1DC86 /* LuckyToolKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LuckyToolKit-dummy.m"; sourceTree = "<group>"; };
+		3B0A1C132B998F1D009AF90E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		3B0A1C152B998F26009AF90E /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizer.swift; sourceTree = "<group>"; };
 		3D4332011249A6D20635BE0AC504A7E8 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
 		3DA0B921CD15BBBFCAFA4B230FDD8E43 /* Pods-LuckyToolKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LuckyToolKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		40CBF8736E0F24D7D3C1CECE52EE0F4A /* Pods-LuckyToolKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LuckyToolKit_Example-Info.plist"; sourceTree = "<group>"; };
@@ -574,6 +578,8 @@
 				12D2DE72675B83DFF720F7A4815CD15F /* Publisher.swift */,
 				B21481899DDD0CAF8A0322C6E52892F9 /* Subject.swift */,
 				5DB3FA432ED8AE02CA46555D8379812E /* UIControl.swift */,
+				3B0A1C132B998F1D009AF90E /* UIView.swift */,
+				3B0A1C152B998F26009AF90E /* UIGestureRecognizer.swift */,
 			);
 			name = Combine;
 			path = LuckyToolKit/Classes/Combine;
@@ -1075,6 +1081,7 @@
 				0327AF2818A6966D2362B5B773B5904C /* Alamofire+EX.swift in Sources */,
 				E3DF6FFAEF4D9218D532722D11771BA5 /* Array.swift in Sources */,
 				FD58352BA810A835D79EEC7C90345AF3 /* CodableEnumeration.swift in Sources */,
+				3B0A1C162B998F26009AF90E /* UIGestureRecognizer.swift in Sources */,
 				B9B4EB020F82B8FDBEBCC9AECDE8D256 /* Copyable.swift in Sources */,
 				A5797C926DB974063AA4663A0B73B9DD /* DownloadTask.swift in Sources */,
 				FE137672750C9C2D0F3A73D0FB9895EC /* Future.swift in Sources */,
@@ -1102,6 +1109,7 @@
 				D0F0A8EB7BAA1A5C0C6BC0EF33135F22 /* UIControl.swift in Sources */,
 				D9A21F1DC99207AEA3AED6BCBF1CD269 /* UIImage.swift in Sources */,
 				33819271F49AF7C19EBA650B1557E220 /* UploadTask.swift in Sources */,
+				3B0A1C142B998F1D009AF90E /* UIView.swift in Sources */,
 				945DC3F67410753191C83E9CBDA55CEC /* ViewController.swift in Sources */,
 				3D824D37ADCAFDEB28D25FDBAF7FFE3A /* ViewController.xib in Sources */,
 				9969EDA680DE38B27536EC84F5FC73C3 /* XibLoadable.swift in Sources */,
