@@ -23,10 +23,7 @@ jobs:
           sudo gem install cocoapods
 
       - name: Install dependencies
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pod repo add Lucky git@github.com:JunkyTang/Lucky.git
           cd Example
           pod install --repo-update
 
@@ -35,6 +32,6 @@ jobs:
 
       - name: Push To Trunk
         env:
-          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: 
-          pod trunk push Lucky --allow-warnings
+          pod trunk push --allow-warnings --source=git@github.com:JunkyTang/Lucky.git
