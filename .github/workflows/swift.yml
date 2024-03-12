@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pod repo add Lucky https://JunkyTang:${{secrets.GITHUB_TOKEN}}git@github.com:JunkyTang/Lucky.git
+          pod repo add Lucky https://JunkyTang:${{secrets.GITHUB_TOKEN}}@github.com/JunkyTang/Lucky.git
           cd Example
           pod install --repo-update
 
