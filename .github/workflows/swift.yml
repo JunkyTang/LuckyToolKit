@@ -35,4 +35,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: 
-          pod trunk push Lucky --allow-warnings
+          pod trunk push Lucky LuckyToolKit.podspec --allow-warnings
