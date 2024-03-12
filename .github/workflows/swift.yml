@@ -24,7 +24,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pod repo add Lucky https://JunkyTang:${{secrets.GITHUB_TOKEN}}@github.com/JunkyTang/Lucky.git
           cd Example
           pod install --repo-update
 
@@ -33,6 +32,6 @@ jobs:
 
       - name: Push To Trunk
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: 
-          pod repo push Lucky LuckyToolKit.podspec --allow-warnings
+          pod trunk push --allow-warnings
