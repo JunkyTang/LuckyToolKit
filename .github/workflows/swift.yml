@@ -24,6 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pod repo add Lucky https://github.com/JunkyTang/Lucky.git
           cd Example
           pod install --repo-update
 
@@ -34,4 +35,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: 
-          pod trunk push --allow-warnings --sources=git@github.com:JunkyTang/Lucky.git
+          pod trunk push Lucky --allow-warnings
