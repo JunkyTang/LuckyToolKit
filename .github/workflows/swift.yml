@@ -23,10 +23,8 @@ jobs:
           sudo gem install cocoapods
 
       - name: Install dependencies
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pod repo add Lucky git@github.com:JunkyTang/Lucky.git
+          pod repo add Lucky https://JunkyTang:${{secrets.GITHUB_TOKEN}}git@github.com:JunkyTang/Lucky.git
           cd Example
           pod install --repo-update
 
