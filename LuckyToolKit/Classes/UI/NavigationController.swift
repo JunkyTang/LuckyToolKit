@@ -18,13 +18,10 @@ open class NavigationController: UINavigationController {
 
     
     open override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        
-        if let vc = viewController as? ViewController {
-            if viewControllers.count > 0 {
-                vc.hidesBottomBarWhenPushed = true
-                if let vc = viewController as? ViewController {
-                    vc.navigationBar.backBtn.isHidden = false
-                }
+        if viewControllers.count > 0 {
+            viewController.hidesBottomBarWhenPushed = true
+            if let vc = viewController as? ViewController {
+                vc.navigationBar.backBtn.isHidden = false
             }
         }
         super.pushViewController(viewController, animated: animated)

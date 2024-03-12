@@ -25,7 +25,7 @@ class HomeController: ViewController {
         // Do any additional setup after loading the view.
         
         btn.publisher(events: .touchUpInside).sink { _ in
-            self.cancellables.forEach{$0.cancel()}
+            TestPopView.loadFromXib().show()
         }.store(in: &cancellables)
         
         

@@ -55,7 +55,7 @@ public extension Popable {
         guard let superView = superView else { return }
         superView.addSubview(containerView)
         animation.fromPosition(containerView)
-        
+        superView.layoutIfNeeded()
         UIView.animate(withDuration: 0.25) {
             animation.toPosition(containerView)
         }
