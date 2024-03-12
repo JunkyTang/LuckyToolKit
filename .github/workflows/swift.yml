@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         env:
-          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pod repo add Lucky git@github.com:JunkyTang/Lucky.git
           cd Example
