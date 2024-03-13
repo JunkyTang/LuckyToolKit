@@ -14,10 +14,15 @@ class XibTestController: ViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let header = HeaderView.loadFromXib()
+        header.layoutIfNeeded()
+        tableview.tableHeaderView = header
+        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         
     }
 
-
+    @IBOutlet weak var tableview: UITableView!
+    
     /*
     // MARK: - Navigation
 
@@ -28,5 +33,23 @@ class XibTestController: ViewController {
     }
     */
 
+}
+
+extension XibTestController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        cell.textLabel?.text = "2222"
+        return cell
+    }
+    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        return HeaderView.loadFromXib()
+//    }
+//    
 }
 

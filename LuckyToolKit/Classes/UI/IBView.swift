@@ -19,13 +19,13 @@ public class IBButton: UIButton {
     
     @IBInspectable var bgColorForSelected: UIColor = .clear {
         didSet {
-            setBackgroundImage(UIImage(color: bgColorForSelected), for: .normal)
+            setBackgroundImage(UIImage(color: bgColorForSelected), for: .selected)
         }
     }
     
     @IBInspectable var bgColorForDisable: UIColor = .clear {
         didSet {
-            setBackgroundImage(UIImage(color: bgColorForDisable), for: .normal)
+            setBackgroundImage(UIImage(color: bgColorForDisable), for: .disabled)
         }
     }
     
@@ -37,13 +37,13 @@ public class IBButton: UIButton {
     
     @IBInspectable var titleColorForDisable: UIColor = .white {
         didSet {
-            setTitleColor(titleColorForDisable, for: .normal)
+            setTitleColor(titleColorForDisable, for: .disabled)
         }
     }
     
     @IBInspectable var titleColorForSelected: UIColor = .white {
         didSet {
-            setTitleColor(titleColorForSelected, for: .normal)
+            setTitleColor(titleColorForSelected, for: .selected)
         }
     }
     
@@ -74,13 +74,13 @@ public class IBButton: UIButton {
     
     @IBInspectable var imageForSelected: UIImage? {
         didSet {
-            setImage(imageForSelected, for: .normal)
+            setImage(imageForSelected, for: .selected)
         }
     }
     
     @IBInspectable var imageForDisable: UIImage? {
         didSet {
-            setImage(imageForDisable, for: .normal)
+            setImage(imageForDisable, for: .disabled)
         }
     }
     

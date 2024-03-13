@@ -17,6 +17,8 @@
 		3B6E8CC92B95BC5C00808A60 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6E8CC72B95BC5C00808A60 /* HomeController.xib */; };
 		3B6E8CDE2B96EF0800808A60 /* TestPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E8CDD2B96EF0800808A60 /* TestPopView.swift */; };
 		3B6E8CE02B96EF1200808A60 /* TestPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6E8CDF2B96EF1200808A60 /* TestPopView.xib */; };
+		3B9750F72BA1734400EFD651 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9750F62BA1734400EFD651 /* HeaderView.swift */; };
+		3B9750F92BA1734C00EFD651 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9750F82BA1734C00EFD651 /* HeaderView.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -45,6 +47,8 @@
 		3B6E8CC72B95BC5C00808A60 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 		3B6E8CDD2B96EF0800808A60 /* TestPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPopView.swift; sourceTree = "<group>"; };
 		3B6E8CDF2B96EF1200808A60 /* TestPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestPopView.xib; sourceTree = "<group>"; };
+		3B9750F62BA1734400EFD651 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		3B9750F82BA1734C00EFD651 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		5EF5FD6C9203A90C7D6E4D6B /* Pods_LuckyToolKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyToolKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* LuckyToolKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyToolKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			children = (
 				3B6E8CC22B95B85900808A60 /* XibTestController.swift */,
 				3B6E8CC32B95B85900808A60 /* XibTestController.xib */,
+				3B9750F62BA1734400EFD651 /* HeaderView.swift */,
+				3B9750F82BA1734C00EFD651 /* HeaderView.xib */,
 				3B6E8CC62B95BC5C00808A60 /* HomeController.swift */,
 				3B6E8CC72B95BC5C00808A60 /* HomeController.xib */,
 			);
@@ -326,6 +332,7 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				3B6E8CC92B95BC5C00808A60 /* HomeController.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				3B9750F92BA1734C00EFD651 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +426,7 @@
 				3B6E8CC42B95B85900808A60 /* XibTestController.swift in Sources */,
 				3B6E8CDE2B96EF0800808A60 /* TestPopView.swift in Sources */,
 				3B001DAE2B9329CD0087143F /* LTRequestAble.swift in Sources */,
+				3B9750F72BA1734400EFD651 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

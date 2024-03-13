@@ -25,7 +25,7 @@ class HomeController: ViewController {
         // Do any additional setup after loading the view.
         
         btn.publisher(events: .touchUpInside).sink { _ in
-            TestPopView.loadFromXib().show()
+            self.navigationController?.pushViewController(XibTestController(), animated: true)
         }.store(in: &cancellables)
         
         

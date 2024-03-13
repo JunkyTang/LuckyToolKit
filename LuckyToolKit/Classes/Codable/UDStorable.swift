@@ -22,6 +22,7 @@ extension Encodable {
         
         let json = try JSONEncoder().encode(self)
         ud?.set(json, forKey: key)
+        ud?.synchronize()
     }
 }
 
