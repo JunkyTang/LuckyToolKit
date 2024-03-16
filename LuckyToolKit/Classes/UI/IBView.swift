@@ -11,14 +11,14 @@ import UIKit
 
 public class IBButton: UIButton {
     
-    @objc enum ImageAlignType: Int {
+    @objc public enum ImageAlignType: Int {
         case left
         case right
         case top
         case bottom
     }
     
-    @IBInspectable var imageAlign: ImageAlignType = .left
+    @IBInspectable public var imageAlign: ImageAlignType = .left
     
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
