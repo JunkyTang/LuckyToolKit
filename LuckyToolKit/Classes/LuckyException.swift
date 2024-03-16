@@ -30,13 +30,13 @@ open class LuckyExceptionHandler {
             try throwable()
         }
         catch {
-            catchException([error])
+            catchException(error)
         }
     }
     
     
     /// 捕获到异常时处理，按需设置
-    public var catchException: ([Error]) -> Void = { err in
+    public var catchException: (Error) -> Void = { err in
         
     }
     
