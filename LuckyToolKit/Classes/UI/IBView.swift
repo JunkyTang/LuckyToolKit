@@ -11,9 +11,55 @@ import UIKit
 
 public class IBButton: UIButton {
     
+    @objc enum ImageAlignType: Int {
+        case left
+        case right
+        case top
+        case bottom
+    }
+    
+    @IBInspectable var imageAlign: ImageAlignType = .left
+    
+    public override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        guard let imgView = imageView,
+              let titleLab = titleLabel
+        else {
+            return
+        }
+        
+        let imgSize = imgView.bounds.size
+        let titleSize = titleLab.bounds.size
+        let paddingH = min(imgSize.width, titleSize.width) / 2
+        let paddingV = min(imgSize.height, titleSize.height) / 2
+        
+        switch imageAlign {
+        case .left:
+            imageEdgeInsets = .zero
+            titleEdgeInsets = .zero
+            semanticContentAttribute = .forceLeftToRight
+        case .right:
+            imageEdgeInsets = .zero
+            titleEdgeInsets = .zero
+            semanticContentAttribute = .forceRightToLeft
+        case .top:
+            imageEdgeInsets = UIEdgeInsets(top: -paddingV, left: paddingH, bottom: paddingV, right: -paddingH)
+            titleEdgeInsets = UIEdgeInsets(top: paddingV, left: -paddingH, bottom: -paddingV, right: paddingH)
+            semanticContentAttribute = .forceLeftToRight
+        case .bottom:
+            imageEdgeInsets = UIEdgeInsets(top: paddingV, left: paddingH, bottom: -paddingV, right: -paddingH)
+            titleEdgeInsets = UIEdgeInsets(top: -paddingV, left: -paddingH, bottom: paddingV, right: paddingH)
+            semanticContentAttribute = .forceLeftToRight
+        }
+    }
+    
+    
+    
+    
     @IBInspectable var bgColorForNormal: UIColor = .clear {
         didSet {
             setBackgroundImage(UIImage(color: bgColorForNormal), for: .normal)
+            contentVerticalAlignment = .top
         }
     }
     
@@ -35,18 +81,17 @@ public class IBButton: UIButton {
         }
     }
     
-    @IBInspectable var titleColorForDisable: UIColor = .white {
-        didSet {
-            setTitleColor(titleColorForDisable, for: .disabled)
-        }
-    }
-    
     @IBInspectable var titleColorForSelected: UIColor = .white {
         didSet {
             setTitleColor(titleColorForSelected, for: .selected)
         }
     }
     
+    @IBInspectable var titleColorForDisable: UIColor = .white {
+        didSet {
+            setTitleColor(titleColorForDisable, for: .disabled)
+        }
+    }
     
     @IBInspectable var titleForNormal: String = "" {
         didSet {
