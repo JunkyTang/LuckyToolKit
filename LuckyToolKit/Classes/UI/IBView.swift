@@ -16,7 +16,6 @@ public class IBButton: UIButton {
     @IBInspectable var bgColorForNormal: UIColor = .clear {
         didSet {
             setBackgroundImage(UIImage(color: bgColorForNormal), for: .normal)
-            contentVerticalAlignment = .top
         }
     }
     
