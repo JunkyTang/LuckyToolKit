@@ -12,6 +12,5 @@ class MainNavigationController: NavigationController {
     
     static let main = MainNavigationController(rootViewController: HomeController())
     
-    
 }
 

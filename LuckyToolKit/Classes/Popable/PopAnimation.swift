@@ -16,7 +16,7 @@ public enum PopAnimation {
     
     
     func fromPosition(_ view: UIView) {
-        
+        guard let spView = view.superview else { return }
         var lat = PopPosition.LateralPosition.fill(padding: -40)
         var lon = PopPosition.LongitudinalPosition.fill(padding: -40)
         var pos = PopPosition.inScreen(lateral: lat, longitudinal: lon)
@@ -40,24 +40,24 @@ public enum PopAnimation {
                 case .left(let padding):
                     make.left.equalTo(padding)
                 case .center(let padding):
-                    make.centerX.equalTo(view.superview!).offset(padding)
+                    make.centerX.equalTo(spView).offset(padding)
                 case .right(let padding):
                     make.right.equalTo(-padding)
                 case .fill(let padding):
-                    make.centerX.equalTo(view.superview!)
-                    make.width.equalTo(view.superview!).offset(padding)
+                    make.centerX.equalTo(spView)
+                    make.width.equalTo(spView).offset(padding)
                 }
                 
                 switch lon {
                 case .top(let padding):
                     make.top.equalTo(padding)
                 case .center(let padding):
-                    make.centerY.equalTo(view.superview!).offset(padding)
+                    make.centerY.equalTo(spView).offset(padding)
                 case .bottom(let padding):
                     make.bottom.equalTo(-padding)
                 case .fill(let padding):
-                    make.centerY.equalTo(view.superview!)
-                    make.height.equalTo(view.superview!).offset(padding)
+                    make.centerY.equalTo(spView)
+                    make.height.equalTo(spView).offset(padding)
                 }
             }
         case .outScreen(let lateral, let longitudinal):
@@ -69,24 +69,24 @@ public enum PopAnimation {
                 case .left(let padding):
                     make.right.equalTo(view.snp.left).offset(padding)
                 case .center(let padding):
-                    make.centerX.equalTo(view.superview!).offset(padding)
+                    make.centerX.equalTo(spView).offset(padding)
                 case .right(let padding):
-                    make.left.equalTo(view.superview!.snp.right).offset(padding)
+                    make.left.equalTo(spView.snp.right).offset(padding)
                 case .fill(let padding):
-                    make.centerX.equalTo(view.superview!)
-                    make.width.equalTo(view.superview!).offset(padding)
+                    make.centerX.equalTo(spView)
+                    make.width.equalTo(spView).offset(padding)
                 }
                 
                 switch lon {
                 case .top(let padding):
-                    make.bottom.equalTo(view.superview!.snp.top).offset(padding)
+                    make.bottom.equalTo(spView.snp.top).offset(padding)
                 case .center(let padding):
-                    make.centerY.equalTo(view.superview!).offset(padding)
+                    make.centerY.equalTo(spView).offset(padding)
                 case .bottom(let padding):
-                    make.top.equalTo(view.superview!.snp.bottom).offset(padding)
+                    make.top.equalTo(spView.snp.bottom).offset(padding)
                 case .fill(let padding):
-                    make.centerY.equalTo(view.superview!)
-                    make.height.equalTo(view.superview!).offset(padding)
+                    make.centerY.equalTo(spView)
+                    make.height.equalTo(spView).offset(padding)
                 }
             }
         }
@@ -94,7 +94,7 @@ public enum PopAnimation {
     }
     
     func toPosition(_ view: UIView) {
-        
+        guard let spView = view.superview else { return }
         switch self {
         case .none(_):
             return
@@ -108,9 +108,9 @@ public enum PopAnimation {
                 case .left(padding: let padding):
                     moveX = CGRectGetMinX(view.frame) - padding
                 case .center(padding: let padding):
-                    moveX = CGRectGetMidX(view.frame) - (CGRectGetMidX(view.superview!.bounds) - padding)
+                    moveX = CGRectGetMidX(view.frame) - (CGRectGetMidX(spView.bounds) - padding)
                 case .right(padding: let padding):
-                    moveX = CGRectGetMinX(view.frame) - CGRectGetMaxX(view.superview!.bounds) + padding
+                    moveX = CGRectGetMinX(view.frame) - CGRectGetMaxX(spView.bounds) + padding
                 case .fill(padding: let padding):
                     moveX = CGRectGetMinX(view.frame) - padding / 2
                 }
@@ -119,9 +119,9 @@ public enum PopAnimation {
                 case .top(padding: let padding):
                     moveY = CGRectGetMinY(view.frame) - padding
                 case .center(padding: let padding):
-                    moveY = CGRectGetMinY(view.frame) - (CGRectGetMidY(view.superview!.bounds) - padding)
+                    moveY = CGRectGetMinY(view.frame) - (CGRectGetMidY(spView.bounds) - padding)
                 case .bottom(padding: let padding):
-                    moveY = CGRectGetMaxY(view.frame) - CGRectGetMaxY(view.superview!.bounds) + padding
+                    moveY = CGRectGetMaxY(view.frame) - CGRectGetMaxY(spView.bounds) + padding
                 case .fill(padding: let padding):
                     moveY = CGRectGetMinY(view.frame) - padding / 2
                 }
@@ -132,9 +132,9 @@ public enum PopAnimation {
                 case .left(padding: let padding):
                     moveX = CGRectGetMaxX(view.frame) - padding
                 case .center(padding: let padding):
-                    moveX = CGRectGetMinX(view.frame) - (CGRectGetMidX(view.superview!.bounds) - padding)
+                    moveX = CGRectGetMinX(view.frame) - (CGRectGetMidX(spView.bounds) - padding)
                 case .right(padding: let padding):
-                    moveX = CGRectGetMinX(view.frame) - CGRectGetMaxX(view.superview!.bounds) - padding
+                    moveX = CGRectGetMinX(view.frame) - CGRectGetMaxX(spView.bounds) - padding
                 case .fill(padding: let padding):
                     moveX = CGRectGetMaxX(view.frame) - padding / 2
                 }
@@ -143,9 +143,9 @@ public enum PopAnimation {
                 case .top(padding: let padding):
                     moveY = CGRectGetMaxY(view.frame) - padding
                 case .center(padding: let padding):
-                    moveY = CGRectGetMinY(view.frame) - (CGRectGetMidY(view.superview!.bounds) - padding)
+                    moveY = CGRectGetMinY(view.frame) - (CGRectGetMidY(spView.bounds) - padding)
                 case .bottom(padding: let padding):
-                    moveY = CGRectGetMinY(view.frame) - CGRectGetMaxX(view.superview!.bounds) - padding
+                    moveY = CGRectGetMinY(view.frame) - CGRectGetMaxX(spView.bounds) - padding
                 case .fill(padding: let padding):
                     moveY = CGRectGetMaxY(view.frame) - padding / 2
                 }

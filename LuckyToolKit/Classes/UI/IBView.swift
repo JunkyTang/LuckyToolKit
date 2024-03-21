@@ -51,19 +51,19 @@ public class IBButton: UIButton {
     
     @IBInspectable var titleForNormal: String = "" {
         didSet {
-            setTitle(titleForNormal, for: .normal)
+            setTitle(titleForNormal.localString(), for: .normal)
         }
     }
     
     @IBInspectable var titleForDisable: String = "" {
         didSet {
-            setTitle(titleForDisable, for: .disabled)
+            setTitle(titleForDisable.localString(), for: .disabled)
         }
     }
     
     @IBInspectable var titleForSelected: String = "" {
         didSet {
-            setTitle(titleForSelected, for: .selected)
+            setTitle(titleForSelected.localString(), for: .selected)
         }
     }
     
@@ -134,6 +134,13 @@ public class IBView: UIView {
 }
 
 public class IBLabel: UILabel {
+    
+    @IBInspectable var localizedKey: String = "" {
+        didSet {
+            text = localizedKey.localString()
+        }
+    }
+    
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
@@ -152,9 +159,17 @@ public class IBLabel: UILabel {
             layer.borderWidth = borderWidth
         }
     }
+    
 }
 
 public class IBTextField: UITextField {
+    
+    @IBInspectable var localizedKey: String = "" {
+        didSet {
+            text = localizedKey.localString()
+        }
+    }
+    
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
@@ -176,6 +191,14 @@ public class IBTextField: UITextField {
 }
 
 public class IBTextView: UITextView {
+    
+    @IBInspectable var localizedKey: String = "" {
+        didSet {
+            text = localizedKey.localString()
+        }
+    }
+    
+    
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
