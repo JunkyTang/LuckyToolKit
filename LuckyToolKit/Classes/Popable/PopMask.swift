@@ -38,13 +38,6 @@ public class PopMask: UIView {
         didTapSelfCallback()
     }
     
-    public override func safeAreaInsetsDidChange() {
-        super.safeAreaInsetsDidChange()
-        log("PopMask \(safeAreaInsets)")
-    }
-
-    
-    
 }
 
 extension PopMask: XibLoadable {}
