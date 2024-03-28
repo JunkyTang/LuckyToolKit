@@ -10,13 +10,13 @@ import UIKit
 public enum Sanbox {
 
     
-    static let document = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    public static let document = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     
-    static let library = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!
+    public static let library = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!
     
-    static let caches = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
+    public static let caches = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
     
-    static let tmp = FileManager.default.temporaryDirectory
+    public static let tmp = FileManager.default.temporaryDirectory
     
 }
 
