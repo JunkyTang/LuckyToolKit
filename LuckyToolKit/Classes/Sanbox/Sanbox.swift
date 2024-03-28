@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Sanbox {
+public enum Sanbox {
 
     
     static let document = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -20,7 +20,7 @@ enum Sanbox {
     
 }
 
-protocol SanboxStorable {
+public protocol SanboxStorable {
     
     static var sanBoxPath: URL { get }
     static var saveDirectory: String { get }
@@ -28,7 +28,7 @@ protocol SanboxStorable {
 }
 
 
-extension SanboxStorable where Self: Codable {
+public extension SanboxStorable where Self: Codable {
     
     func save(as name: String) throws {
         
