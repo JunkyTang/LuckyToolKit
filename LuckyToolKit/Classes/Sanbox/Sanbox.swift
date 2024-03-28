@@ -28,7 +28,7 @@ public protocol SanboxStorable {
 }
 
 
-public extension SanboxStorable where Self: Codable {
+extension SanboxStorable where Self: Codable {
     
     func save(as name: String) throws {
         

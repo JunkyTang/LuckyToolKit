@@ -20,15 +20,16 @@ public extension Subscribers {
         public init(subscriber: S? = nil, gestureRecognizer: G) {
             self.subscriber = subscriber
             self.gestureRecognizer = gestureRecognizer
-            gestureRecognizer.addTarget(self, action: #selector(eventHandler))
+            gestureRecognizer.addTarget(self, action: #selector(eventHandler(sender:)))
         }
         
         deinit {
             print("UIGestureRecognizerSubscription -deinit")
         }
         
-        @objc func eventHandler() {
-            _ = subscriber?.receive(gestureRecognizer)
+        @objc func eventHandler(sender: UIGestureRecognizer) {
+            guard let g = sender as? G else { return }
+            _ = subscriber?.receive(g)
         }
         
         public func request(_ demand: Subscribers.Demand) {
