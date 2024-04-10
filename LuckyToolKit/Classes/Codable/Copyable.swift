@@ -8,14 +8,14 @@
 import Foundation
 
 
-protocol Copyable: Codable {
+public protocol Copyable: Codable {
     
     func copy() throws -> Self
     
     func copyAdapter() -> Self
 }
 
-extension Copyable {
+public extension Copyable {
     
     
     /// 编码再解码成新对象
