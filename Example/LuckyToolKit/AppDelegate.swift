@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  LuckyToolKit
 //
-//  Created by 汤俊杰 on 03/02/2024.
-//  Copyright (c) 2024 汤俊杰. All rights reserved.
+//  Created by Junky on 03/02/2022.
+//  Copyright (c) 2022 Junky. All rights reserved.
 //
 
 import UIKit

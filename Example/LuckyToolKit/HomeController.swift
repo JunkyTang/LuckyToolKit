@@ -2,8 +2,8 @@
 //  HomeController.swift
 //  LuckyToolKit_Example
 //
-//  Created by junky on 2024/3/4.
-//  Copyright © 2024 CocoaPods. All rights reserved.
+//  Created by junky on 2022/3/4.
+//  Copyright © 2022 CocoaPods. All rights reserved.
 //
 
 import LuckyToolKit

@@ -2,7 +2,7 @@
 //  XIBButton.swift
 //  LuckyToolKit_Example
 //
-//  Created by junky on 2024/3/4.
+//  Created by junky on 2022/3/4.
 //  Copyright © 2024 CocoaPods. All rights reserved.
 //
 
