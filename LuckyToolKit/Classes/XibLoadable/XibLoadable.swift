@@ -6,24 +6,25 @@
 //
 
 import Foundation
+import UIKit
 
 
-public protocol XibLoadable {}
+public protocol XibLoadable: UIView {
+    static var xibName: String { get }
+}
 
-public extension XibLoadable where Self: UIView {
+public extension XibLoadable {
     
     typealias S = Self
     
-    static func loadFromXib(name: String? = nil) -> S {
-        
-        var xibName = name;
-        if xibName == nil {
-            xibName = String(describing: self)
-        }
+    static var xibName: String {
+        return String(describing: self)
+    }
+    
+    static func loadFromXib() -> S {
         
         let bundle = Bundle(for: S.self)
-        if let xibName = xibName,
-           let instance = bundle.loadNibNamed(xibName, owner: nil)?.first,
+        if let instance = bundle.loadNibNamed(xibName, owner: nil)?.first,
            let view = instance as? Self {
             return view
         }
