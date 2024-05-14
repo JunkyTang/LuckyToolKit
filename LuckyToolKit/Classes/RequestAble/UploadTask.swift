@@ -23,7 +23,7 @@ public struct UploadTask<Param: Codable>: RequestAble {
         upload(data: data, progressHandler: progressHandler, callback: callback)
     }
     
-    init(url: Alamofire.URLConvertible, method: HTTPMethod, parameters: Param? = nil, data: Data) {
+    public init(url: Alamofire.URLConvertible, method: HTTPMethod, parameters: Param? = nil, data: Data) {
         self.url = url
         self.method = method
         self.parameters = parameters
