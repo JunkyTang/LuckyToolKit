@@ -11,9 +11,10 @@ import Alamofire
 public struct UploadTask<Param: Codable>: RequestAble {
     
     
-    public typealias ResponseType = String
+    public typealias ResponseType = URL
     
     public var url: Alamofire.URLConvertible
+    public var method: HTTPMethod = .get
     public var parameters: Param? = nil
     public var data: Data
     
@@ -22,11 +23,13 @@ public struct UploadTask<Param: Codable>: RequestAble {
         upload(data: data, progressHandler: progressHandler, callback: callback)
     }
     
-    public init(url: Alamofire.URLConvertible, parameters: Param? = nil, data: Data) {
+    init(url: Alamofire.URLConvertible, method: HTTPMethod, parameters: Param? = nil, data: Data) {
         self.url = url
+        self.method = method
         self.parameters = parameters
         self.data = data
     }
+    
     
 }
 
