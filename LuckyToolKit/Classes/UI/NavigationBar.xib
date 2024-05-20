@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,7 +50,7 @@
                 <constraint firstItem="PA7-j2-2Wh" firstAttribute="leading" secondItem="zwD-MS-XUQ" secondAttribute="leading" id="V6N-zA-P7C"/>
                 <constraint firstItem="sJG-Ru-TVt" firstAttribute="top" secondItem="PA7-j2-2Wh" secondAttribute="top" id="Xr1-Of-oEV"/>
                 <constraint firstItem="PA7-j2-2Wh" firstAttribute="bottom" secondItem="aDP-Tw-Deh" secondAttribute="bottom" constant="-10" id="m2g-Sw-DSF"/>
-                <constraint firstItem="zwD-MS-XUQ" firstAttribute="trailing" secondItem="sJG-Ru-TVt" secondAttribute="trailing" id="reH-0Q-0Ke"/>
+                <constraint firstItem="zwD-MS-XUQ" firstAttribute="trailing" secondItem="sJG-Ru-TVt" secondAttribute="trailing" constant="15" id="reH-0Q-0Ke"/>
                 <constraint firstItem="sJG-Ru-TVt" firstAttribute="bottom" secondItem="PA7-j2-2Wh" secondAttribute="bottom" id="tZe-82-gyY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
