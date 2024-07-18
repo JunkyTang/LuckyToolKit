@@ -12,6 +12,7 @@ import LuckyToolKit
 class TestPopView: UIView {
 
     @IBOutlet weak var colorV: UIView!
+    
     override var safeAreaInsets: UIEdgeInsets {
         return UIApplication.safeAreaInset
     }
@@ -24,6 +25,7 @@ class TestPopView: UIView {
 
 extension TestPopView: Popable, XibLoadable {
     var animation: PopAnimation {
-        return .move(from: .outScreen(lateral: .fill(padding: 0), longitudinal: .bottom(padding: 0)), to: .inScreen(lateral: .fill(padding: 0), longitudinal: .bottom(padding: 0)))
+        .move(from: .outScreen(lateral: .fill(padding: -10), longitudinal: .bottom(padding: 0)), to: .inScreen(lateral: .fill(padding: -10), longitudinal: .bottom(padding: 0)))
+//        .none(position: .inScreen(lateral: .fill(padding: -10), longitudinal: .bottom(padding: 0)))
     }
 }

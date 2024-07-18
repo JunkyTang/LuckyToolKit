@@ -48,8 +48,9 @@ public extension Popable {
             mask.didTapSelfCallback = didTapMask
             superView?.addSubview(mask)
             mask.snp.makeConstraints { make in
-                make.edges.equalTo(UIEdgeInsets.zero)
+                make.edges.equalTo(0)
             }
+            superView?.layoutIfNeeded()
             superView = mask
         }
         guard let superView = superView else { return }

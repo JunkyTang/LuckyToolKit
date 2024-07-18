@@ -1,16 +1,19 @@
 PODS:
   - Alamofire (5.8.1)
-  - LuckyToolKit (0.3.4):
+  - DebugSwift (0.3.1)
+  - LuckyToolKit (0.5.3):
     - Alamofire
     - SnapKit
   - SnapKit (5.7.1)
 
 DEPENDENCIES:
+  - DebugSwift
   - LuckyToolKit (from `../`)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DebugSwift
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -19,9 +22,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
-  LuckyToolKit: ee9c57fe93fb648f816a6dfe336d467aad64c82e
+  DebugSwift: 0c34f292b01fe8a9b270683e5d415c6bc4f3df1c
+  LuckyToolKit: d0f1ad171579b50298a139378e20ad334ce48f1c
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: e0880de5a891a1b8ceb11ed031a67e83f85e8a05
+PODFILE CHECKSUM: 24c87cc55221962994b7d9c2188e005207710369
 
 COCOAPODS: 1.15.2

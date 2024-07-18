@@ -2,6 +2,8 @@ use_frameworks!
 
 platform :ios, '13.0'
 
+pod 'DebugSwift'
+
 target 'LuckyToolKit_Example' do
   pod 'LuckyToolKit', :path => '../'
 

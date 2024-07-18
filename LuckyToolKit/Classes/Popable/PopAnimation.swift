@@ -112,7 +112,7 @@ public enum PopAnimation {
                 case .right(padding: let padding):
                     moveX = CGRectGetMinX(view.frame) - CGRectGetMaxX(spView.bounds) + padding
                 case .fill(padding: let padding):
-                    moveX = CGRectGetMinX(view.frame) - padding / 2
+                    moveX = 0
                 }
                 
                 switch lon {

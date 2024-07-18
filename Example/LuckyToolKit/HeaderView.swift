@@ -21,7 +21,7 @@ class HeaderView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        log(self)
+        
     }
 }
 

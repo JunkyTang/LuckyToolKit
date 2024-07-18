@@ -7,6 +7,7 @@
 //
 
 import LuckyToolKit
+import DebugSwift
 
 class HomeController: ViewController {
     
@@ -21,23 +22,25 @@ class HomeController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        DebugSwift.setup()
         // Do any additional setup after loading the view.
         
         btn.publisher(events: .touchUpInside).sink { _ in
-            self.navigationController?.pushViewController(XibTestController(), animated: true)
+            TestPopView.loadFromXib().show(self.view)
         }.store(in: &cancellables)
         
         
         let publisher = blueView.publisher(gestureRecognizer: UITapGestureRecognizer())
             
         publisher.sink { _ in
-            log("-----")
+            
         }.store(in: &cancellables)
-        
-        publisher.sink { _ in
-            log("++++++")
-        }.store(in: &cancellables)
+//        
+//        publisher.sink { _ in
+//            
+//        }.store(in: &cancellables)
     }
 
 
