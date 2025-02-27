@@ -398,6 +398,8 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LuckyToolKit_Example/Pods-LuckyToolKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DebugSwift/DebugSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/LuckyCombine/LuckyCombine.framework",
+				"${BUILT_PRODUCTS_DIR}/LuckyPropertyWrapper/LuckyPropertyWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/LuckyToolKit/LuckyToolKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -405,6 +407,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DebugSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LuckyCombine.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LuckyPropertyWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LuckyToolKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",

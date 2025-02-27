@@ -1,13 +1,19 @@
 PODS:
   - Alamofire (5.8.1)
   - DebugSwift (0.3.1)
-  - LuckyToolKit (0.5.3):
+  - LuckyCombine (1.1.1)
+  - LuckyPropertyWrapper (0.3.2)
+  - LuckyToolKit (0.6.1):
     - Alamofire
+    - LuckyCombine
+    - LuckyPropertyWrapper
     - SnapKit
   - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - DebugSwift
+  - LuckyCombine (from `https://github.com/JunkyTang/LuckyCombine.git`)
+  - LuckyPropertyWrapper (from `https://github.com/JunkyTang/LuckyPropertyWrapper.git`)
   - LuckyToolKit (from `../`)
 
 SPEC REPOS:
@@ -17,15 +23,29 @@ SPEC REPOS:
     - SnapKit
 
 EXTERNAL SOURCES:
+  LuckyCombine:
+    :git: https://github.com/JunkyTang/LuckyCombine.git
+  LuckyPropertyWrapper:
+    :git: https://github.com/JunkyTang/LuckyPropertyWrapper.git
   LuckyToolKit:
     :path: "../"
+
+CHECKOUT OPTIONS:
+  LuckyCombine:
+    :commit: cdca0b7f62edf6017314f5dd492a51fcf98918db
+    :git: https://github.com/JunkyTang/LuckyCombine.git
+  LuckyPropertyWrapper:
+    :commit: 820cb64a66872132ae21d85e1d2050e32c470f56
+    :git: https://github.com/JunkyTang/LuckyPropertyWrapper.git
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   DebugSwift: 0c34f292b01fe8a9b270683e5d415c6bc4f3df1c
-  LuckyToolKit: d0f1ad171579b50298a139378e20ad334ce48f1c
+  LuckyCombine: 89c0d1bf93f22f1778f55c08a8572b03d0342a5e
+  LuckyPropertyWrapper: 940fe15c1de44b392c10e444b22ca379572d1c45
+  LuckyToolKit: 59b2fed597dd593f308255b8eb8da20f6312499c
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 24c87cc55221962994b7d9c2188e005207710369
+PODFILE CHECKSUM: 91939930aed8661e6083fb20382ed756b2050a6f
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

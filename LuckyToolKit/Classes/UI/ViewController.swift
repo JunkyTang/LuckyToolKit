@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 import SnapKit
+import LuckyCombine
 
 open class ViewController: UIViewController {
 
@@ -47,7 +48,7 @@ open class ViewController: UIViewController {
     }
     
     open func bindVM() {
-        navigationBar.backBtn.publisher(events: .touchUpInside).sinkOnMain { [weak self] _ in
+        navigationBar.backBtn.publisher(events: .touchUpInside).receive(on: DispatchQueue.main).sink { [weak self] _ in
             guard let weakself = self else { return }
             weakself.navigationController?.popViewController(animated: true)
         }.store(in: &cancellables)

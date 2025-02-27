@@ -9,17 +9,17 @@ import Foundation
 import Combine
 
 
-extension Future {
-    
-    /// 直接执行
-    /// - Returns: 内存管理
-    public func fire() -> AnyCancellable {
-        sink { _ in
-            
-        } receiveValue: { _ in
-            
-        }
-    }
-    
-}
+//extension Future {
+//    
+//    /// 直接执行
+//    /// - Returns: 内存管理
+//    public func fire() -> AnyCancellable {
+//        sink { _ in
+//            
+//        } receiveValue: { _ in
+//            
+//        }
+//    }
+//    
+//}
 

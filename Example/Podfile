@@ -3,6 +3,9 @@ use_frameworks!
 platform :ios, '13.0'
 
 pod 'DebugSwift'
+pod 'LuckyPropertyWrapper', :git => 'https://github.com/JunkyTang/LuckyPropertyWrapper.git'
+pod 'LuckyCombine' , :git => 'https://github.com/JunkyTang/LuckyCombine.git'
+
 
 target 'LuckyToolKit_Example' do
   pod 'LuckyToolKit', :path => '../'

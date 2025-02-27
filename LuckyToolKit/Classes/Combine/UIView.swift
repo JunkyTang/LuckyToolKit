@@ -9,11 +9,11 @@ import UIKit
 import Combine
 
 
-public extension UIView {
-    
-    func publisher(gestureRecognizer: UIGestureRecognizer) -> Publishers.UIGestureRecognizerPublisher {
-        addGestureRecognizer(gestureRecognizer)
-        return gestureRecognizer.publisher()
-    }
-    
-}
+//public extension UIView {
+//    
+//    func publisher(gestureRecognizer: UIGestureRecognizer) -> Publishers.UIGestureRecognizerPublisher {
+//        addGestureRecognizer(gestureRecognizer)
+//        return gestureRecognizer.publisher()
+//    }
+//    
+//}
